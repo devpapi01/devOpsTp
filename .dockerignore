@@ -1,0 +1,27 @@
+# Dossiers Maven
+
+.mvn/
+mvnw
+mvnw.cmd
+# Fichiers IDE
+../.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+# Fichiers Git
+.git/
+.gitignore
+# Logs
+*.log
+logs/
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+# Documentation
+*.md
+README.md
+# Autres
+.env
