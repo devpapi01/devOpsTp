@@ -1,0 +1,36 @@
+---
+- name: Demo Ansible - Configuration locale
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Message de bienvenue
+      debug:
+        msg: "Ansible fonctionne !"
+
+    - name: Créer un dossier demo
+      file:
+        path: /tmp/ansible-demo
+        state: directory
+        mode: '0755'
+
+    - name: Créer un fichier texte
+      copy:
+        content: |
+          Fichier créé par Ansible
+          Date: {{ ansible_date_time.date }}
+        dest: /tmp/ansible-demo/info.txt
+
+    - name: Installer htop
+      apt:
+        name: htop
+        state: present
+        update_cache: yes
+
+    - name: Vérifier htop
+      command: which htop
+      register: htop_path
+      changed_when: false
+
+    - name: Afficher le chemin htop
+      debug:
+        msg: "htop installé à : {{ htop_path.stdout }}"
