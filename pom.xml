@@ -2,10 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <!-- Version du modèle de projet POM -->
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Définition du parent du projet, ici c'est Spring Boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -13,22 +11,21 @@
         <relativePath/> <!-- Recherche le parent dans le dépôt -->
     </parent>
 
-    <!-- Informations sur le projet -->
-    <groupId>com.example</groupId> <!-- Identifiant du groupe de votre projet -->
-    <artifactId>projetMPISI</artifactId> <!-- Identifiant de l'artéfact (le nom de votre projet) -->
-    <version>0.0.1-SNAPSHOT</version> <!-- Version du projet -->
-    <name>projetMPISI</name> <!-- Nom du projet -->
-    <description>projetMPISI</description> <!-- Description du projet -->
-    <url/> <!-- URL du projet (optionnel) -->
+    <groupId>com.example</groupId>
+    <artifactId>projetMPISI</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>projetMPISI</name>
+    <description>projetMPISI</description>
 
-    <!-- Licences et développeurs -->
+
+
     <licenses>
         <license/>
     </licenses>
     <developers>
         <developer/>
     </developers>
-    <scm> <!-- Configuration pour le contrôle de version (SCM) -->
+    <scm>
         <connection/>
         <developerConnection/>
         <tag/>
@@ -45,7 +42,7 @@
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
             <sonar.coverage.jacoco.xmlReportPaths>
-                ../DevOpsMPISI-main/target/site/jacoco/jacoco.xml
+                ${project.basedir}/target/site/jacoco/jacoco.xml
             </sonar.coverage.jacoco.xmlReportPaths>
 
     </properties>

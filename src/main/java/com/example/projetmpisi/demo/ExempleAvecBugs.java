@@ -20,17 +20,7 @@ public class ExempleAvecBugs {
     }
 
     // BUG 3: Ressource non fermée
-    public void lireFichier(String path) {
-        // SonarCloud détectera: Resource leak
-        java.io.FileReader reader = null;
-        try {
-            reader = new java.io.FileReader(path);
-            // ... lecture
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        // reader n'est jamais fermé !
-    }
+
 
     // CODE SMELL 1: Méthode trop complexe (complexité cyclomatique élevée)
     public String evaluerNote(int note) {
