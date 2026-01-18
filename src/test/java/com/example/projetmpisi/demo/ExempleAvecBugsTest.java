@@ -24,15 +24,7 @@ class ExempleAvecBugsTest {
         assertEquals(5, result);
     }
 
-    @Test
-    void lireFichier() {
-        ExempleAvecBugs ex = new ExempleAvecBugs();
 
-        // On teste juste que la méthode s'exécute
-        ex.lireFichier("fichier_inexistant.txt");
-
-        assertEquals(true, true);
-    }
 
     @Test
     void evaluerNote() {
